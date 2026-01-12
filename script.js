@@ -37,16 +37,6 @@ function checkElements() {
   });
 }
 
-// 페이지 전체 클릭 시 오디오 재생 (브라우저 정책 우회)
-document.addEventListener('click', function() {
-  const audio = document.querySelector('.audio-container audio');
-  if (audio && audio.paused) {
-    audio.play().catch(error => {
-      console.log('재생 오류:', error);
-    });
-  }
-});
-
 // 테이블 행에 마우스 호버 효과 추가
 document.addEventListener('DOMContentLoaded', function() {
   const rows = document.querySelectorAll('table tbody tr');
