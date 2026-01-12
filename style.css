@@ -1,0 +1,89 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* 배경색과 글자색 (커서 AI 스타일) */
+body {
+  background-color: #0b0d0e; /* 아주 어두운 차콜색 */
+  color: #e3e3e3;            /* 약간 밝은 회색 글자 */
+  margin: 0;                 /* 여백 제거 */
+  padding: 20px;             /* 화면 끝에서 살짝 띄우기 */
+  font-family: 'Segoe UI', sans-serif; /* 깔끔한 폰트 */
+  
+  /* 모든 요소를 수직으로 쌓고 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가로축 중앙 정렬 */
+  min-height: 100vh;
+  
+  /* 텍스트 중앙 정렬 */
+  text-align: center; 
+}
+
+/* 단락과 div 사이 간격 */
+p, div {
+  margin-bottom: 15px;
+}
+
+/* 입력창도 어둡게 (선택사항) */
+input {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #333;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+/* 이미지가 너무 붙어있지 않게 간격을 줍니다 */
+img {
+  margin: 10px;
+  max-width: 300px; /* 이미지 크기가 너무 크면 조절하세요 */
+}
+
+/* 이미지 컨테이너: 가로로 배치 */
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+/* 오디오 창 위아래 간격 */
+.audio-container {
+  margin-top: 30px;
+}
+
+/* 표 전체 컨테이너 */
+table {
+  margin: 30px 0;      /* 위아래 간격만 주고 좌우는 자동 */
+  border-collapse: collapse;
+  width: 90%;          /* 너비를 적절히 조절 */
+  max-width: 800px;    /* 너무 커지지 않게 제한 */
+  
+  /* flex 환경이 아닐 때 중앙 정렬 */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 테이블 내부 글자들도 중앙으로 */
+th, td {
+  border: 1px solid #333;
+  padding: 12px;
+  text-align: center; 
+}
+
+/* 스크롤 애니메이션: 초기 상태 */
+.fade-out {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+/* 스크롤 애니메이션: 나타나는 상태 */
+.fade-in {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
